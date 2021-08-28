@@ -9,4 +9,3 @@
 * Build: docker build -t [image-name] . -f ml.Dockerfile  
 * Run: docker run [-v mount path] -it [-p ip mapping for jupyter] [image-name]
 
-
