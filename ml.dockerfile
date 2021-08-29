@@ -43,7 +43,7 @@ FROM base as ml
 #             scikit-learn scikit-image \
 #             beautifulsoup4"
 
-# RUN /bin/bash -c "source activate ml-py3.9 \
+# RUN /bin/bash -c "source activate ml-py3.9 \ 
 #     && conda install -yc conda-forge \
 #     xgboost lightgbm catboost"
 
@@ -74,11 +74,6 @@ FROM base as ml
  RUN sh -c "$(wget -O- https://github.com/deluan/zsh-in-docker/releases/download/v1.1.1/zsh-in-docker.sh)"
 
 CMD ["zsh"]
-
-
-
-
-
 
 
 # docker build -t stevenchen/ml . -f ml.dockerfile
