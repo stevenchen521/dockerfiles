@@ -44,7 +44,4 @@ FROM base as ml
 
 CMD ["bash"]
 
-
-
-
 # docker build -t stevenchen/ml . -f ml.dockerfile
