@@ -4,6 +4,8 @@ FROM ubuntu:20.04 as base
 
  RUN apt-get update && apt-get -y upgrade && apt-get install -y apt-utils
 
+
+
  RUN apt-get install -y \
         net-tools iputils-ping \
         build-essential cmake git \
@@ -11,9 +13,10 @@ FROM ubuntu:20.04 as base
         vim \
         zip p7zip-full p7zip-rar 
         # imagemagick ffmpeg libomp5 \ for video GPU
-RUN mkdir /home/stevenchen521
+ RUN mkdir /home/stevenchen521
+ WORKDIR /home/stevenchen521/
 
-CMD ["bash"]
+ # Default powerline10k theme, no plugins installed
+ RUN sh -c "$(wget -O- https://github.com/deluan/zsh-in-docker/releases/download/v1.1.1/zsh-in-docker.sh)"
 
-
-# docker build -t stevenchen/base:0.1 . -f base.dockerfile
+CMD ["zsh"]
