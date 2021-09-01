@@ -13,4 +13,5 @@ dependencies:
   - xgboost
   - lightgbm
   - catboost
+  - dataprep
 prefix: /opt/conda/envs/ml-py3.9

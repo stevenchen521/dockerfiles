@@ -64,6 +64,10 @@ FROM base as ml
  RUN echo "source activate ml-py3.9" > ~/.zshrc
  ENV PATH /opt/conda/envs/ml-py3.9/bin:/opt/conda/bin:$PATH
 
+ COPY requirements.txt .
+ RUN pip install -r requirements.txt
+
+
  EXPOSE 80
  EXPOSE 8080
  EXPOSE 8800
