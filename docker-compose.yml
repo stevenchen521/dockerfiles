@@ -1,0 +1,15 @@
+version: "3.9"
+services:
+  python:
+    # image: ml:latest
+    image: public.ecr.aws/k5c1q3q0/ml:latest
+    container_name: work_space_ml
+    stdin_open: true
+    tty: true
+    ports:
+      - 8800:8800
+      - 8888:8888
+    volumes:
+      - type: bind #volume
+        source: "/Users/stevenchen521/Library/Mobile Documents/com~apple~CloudDocs/Cloud/work_space"
+        target: "/home/stevenchen521/work_space"
